@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <!--a tag <WIDTH> serve para reduzir o tamanho da imagem ou video-->
+        <!--Aqui eu fiz um por um, apenas para testar-->
+    <video src="video/meu-video-mp4.mp4" width="300" controls></video>
+    <video src="video/meu-video-ogv.ogv" width="300" controls></video>
+    <video src="video/meu-video-webm.webm" width="300" controls></video>
+    <br>
+    <!--Já aqui eu vou fazer da forma que deve ser feita e colocar o poster na capa do vídeo, porém EESE METODO é muito caro para o cliente pois os vídeos hospedados no site consomem muito espaço!-->
+    <h1>Fazendo de forma "correta" porém cara!</h1>
+    <video controls width="300" poster="video/capa-limão-png.png">
+        <source src="video/meu-video-mp4.mp4" type="video/mp4">
+        <source src="video/meu-video-webm.webm" type="video/webm">
+        <source src="video/meu-video-ogv.ogv" type="video/ogv">
+        <p>Seu navegador não possui compatibilidade com esse vídeo</p>
+    </video>
+    <h1>Fazendo de forma correta e barata, ou seja inserindo videos do YouTube!</h1>
+        <!--Aqui é o seguinte: para o site não ficar pessado, eu não vou colocar o vídeo direto no navegador mas sim, colocar ele em uma playlist privada e puxar ele de outro servidor! -->
+        <iframe width="300 " height="315" src="https://www.youtube.com/embed/z9HlGJWOV4E?si=Cvw2PVNyOZFt5gbl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+div{
+    display: inline-block;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    /*Altura*/height: 200px ;
+    /*Largura*/width: 200px ;
+}
+/*Pseudo-classes devem estar relacinadas a um elemento ou a uma classe. Para Pseudo-classes usa-se DOIS PONTOS  -> :    */
+div:hover{
+    /*Nesse quando vc passa o mouse em cima ele troca a cor*/
+    background-color: yellow;
+}
+
+

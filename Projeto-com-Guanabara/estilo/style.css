@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/*Fonte do titulo (Curiosidades de Tecnologia)*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*Fonte do titulo ( h1 e h2)*/
+@font-face{
+    font-family: "Android";
+    src: url('/idroid/IDroid.otf')format('opentype');
+    font-weight: normal;
+}
+
+/*
+Paleta de cor utilizada no site:
+
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+
+:root 
+é uma pseudo-classe que serve para o documento inteiro. Mas para isso prescisamos criar variáveis dentro dela*/
+
+:root {
+    /* Criando uma variavel chamada cor. Esta variável poderá ser utilizada em todo o código css*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:  'Bebas Neue', sans-serif;
+    --font-android:'Android',sans-serif;
+}
+/*Criando uma configuração global para retirar as margins e os padings*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+a.externo::after{
+    content: '\00A0\1f517';
+}
+
+header{
+    /*Fazendo um cabeçalho degradê*/
+    background-image: linear-gradient(to bottom,var(--cor3), var(--cor5));
+    background-color: var(--cor4);
+    /*Aumenta o tamanho da cabeçalho*/
+    min-height: 150px;
+    text-align: center;
+    /*Aqui ele diminui o topo do texto h1*/
+    padding-top: 40px;
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    /*Ele diminui ou abaixa o topo do cabeçalho
+    margin-top: 30px;*/
+
+    /*Aqui é tamanho da letra do titulo*/
+    font-size: 3em;
+    font-weight: normal;
+
+    /*Aqui ele da um espaço entre o h1 e o p*/
+    margin-bottom: 20px;
+    /*Criando Sombras*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    
+    
+}
+header > p{
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    /*Aqui o paragrafo vai respeitar o cabeçalho*/
+    max-width: 600px;
+    /*Aqui ele será centralizado*/
+    margin: auto;
+    /*Eu acho que o guanabara fez isso para centralizar melhor*/
+    padding-right: 10px;
+    padding-left: 10px;
+    /*Era para ter colocado margin-bootom; porém não ficou igual o do guanabara!!!*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.637);
+
+}
+
+nav{
+    background-color: var(--cor5);
+    /*Dar uma preenchida para ficar com espaço */
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.575);
+    
+}
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    /*Esse serve para deixar o as informaçôes redondas*/
+    border-radius: 5px;
+    text-decoration: none;
+    /*Colocando em negrito*/
+    font-weight: bold;
+    /*     importante          : ESSE AQUI É AQUELE QUE TEM NO CANVA      */
+    transition-duration: 1s;
+
+
+}
+/*Para trocar de cor quando eu passar o mouse, basta fazer*/
+nav >a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main{
+    
+    /*AQUI EU ADAPTEI O CONTEUDO (H1-H6, <P>)*/
+    min-width: 300PX;
+    max-width: 1000px;
+    /*Aqui vou fazer com que o a caixa fique branca e centralizada mesmo que aumente ou diminua o tamanho*/
+    margin: auto;
+    background-color: white;
+    /*Aqui vai ser a sobra*/
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    /*Aqui apenas as bordas de baixo ficaram arredondadas*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+}
+
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    /*IMPORTANTE     back-ground para deixar trasparente*/
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    /*A letra A da um espacinho */
+    text-indent: 8px;
+
+}
+
+/*                  IMPORTANTE              (CONFIGURANDO O PÁRAGRFO)*/
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    /*eSPAÇAMENTO ENTRE AS LINHAS*/
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+main img{
+    /*Aqui eu fiz com que as imagens fiquem em 100% do espaço e que fiquem flexiveis*/
+    width: 100%;
+}
+
+main img.pequena{
+    /*Aquio eu diminui o tamanho da imagem */
+    max-width: 350px;
+    /*Aqui eu centalizei ela. Pois  imagem como não é um bloco prescisa-se fazer isto para centralizar*/
+    display: block;
+    margin: auto;
+}
+/*Configuração back-ground*/
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+/*Configuração do video*/
+div.video > iframe{
+    position: absolute;
+    /*Top é a distancia do topo do video que vai ficar da parte de cima da caixa*/
+    top: 5%;
+    /*left é a distancia do lado do video que vai ficar da parte lateral da caixa*/
+    left: 5%;
+
+    width: 90%;
+    height: 90%;
+
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.575);
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    /*Esta margin serve para preencher todo o espaço de cima com o h3*/
+    margin: -10px -10px 0px -10px;
+    /*Esse vai deixar aredondado em cima e reto em baixo*/
+    border-radius: 10px 10px 0px 0px ;
+}
+
+aside > ul{
+    /*Colocando emoji de conferido*/
+    list-style-type: '\2714';
+    /*Colocando as bolinhas para dentro*/
+    list-style-position: inside;
+    /*Dividindo as listas em duas colunas*/
+    columns: 2;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer  a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}

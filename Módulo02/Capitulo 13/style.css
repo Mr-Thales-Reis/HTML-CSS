@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(to right,#004C50,#00939C);
+}
+main{
+    background-color: white;
+    /*Arredonda a broda*/border-radius: 20px;
+    /*Fazendo uma sombra em baixo 1° quanto vai andar para o lado, 2°quanto vai andar para baixo, 3°quanto vai espalhar, 4°é o quanto de trasparencia ela vai ter*/box-shadow: 5px 5px 15px #5020008f;
+    /*Largura*/ width: 600px;
+    /*Para o texto ficar dentro da largura*/ padding: 10px;
+    /*Centraliza o conteúdo*/margin: auto;
+}
+h1{
+    /*Deixa o item centralizado*/text-align: center;
+    /*deixar o item h1 com sombra*/text-shadow:1px 1px 2px #004c5093;
+    color: #502000;
+}
+h2{
+    color: #9C3E00;
+}
+p{
+    text-align: justify;
+}

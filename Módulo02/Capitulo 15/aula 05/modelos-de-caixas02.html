@@ -1,0 +1,86 @@
+<!--
+
+AQUI FORAM FEITA MAIS ALGUAMS TAS E JÁ MOSTRANDO COMO SIMPLIFICA-LA 
+OBS: AMBAS AS ORDENS SÃO DE CIMA PARA BAIXO
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1{ /*box-level*/
+            /*MEU H1 É DO TIPO BOX-LEVEL 
+            PORÉM SE EU QUISER TRANSFORMAR ELE EM DISPLAY É SÓ colocar (display: inline;) aqui eu não coloquei mas no a{} eu troquei!*/
+
+            
+
+            background-color: lightgray;
+            /*Aumenta a largura*/
+            height: 300px;
+            /*Aumenta ou diminui a altura*/
+            width: 300px;
+
+            /*Largura da borda
+            border-width: 10px;
+            /*Coloca uma margem bem fina  ou da estilo a borda 
+            border-style: solid;
+            Cor ao estilo da borda
+            border-color: rgb(70, 68, 68);*/
+            /*esta linha ou comando de baixo substitui todads as borders de cima*/
+            border: 10px solid darkgray;
+
+            /*SÂO AS DIMENSOES DOS ELEMENTOS DE FORMA SEPARADAS
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+
+            /*Estas são de forma unica. Já estas são em uma unica linha*/
+            padding: 10px 10px 10px 10px;
+
+             /*PARA COLOCAR A MARGEM NO MEIO, BASTA:
+            margin: auto;*/
+        
+            /*MARGEM de forma separada
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 29px;
+            margin-left: 10px;*/
+            /*MARGEM DE FORMA UNICA
+            margin: 20px 20px 40px;*/
+            /*MARGEM UNICA JÃ CENTRALIZADA*/
+            margin: 20px auto 40px auto;
+
+            /*é um tracejado que esta dentro da margem
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: blue;
+            
+            ESSE DE BAIXO É O JEITO SIMPLIFICADO:
+            */
+           outline: 5px dashed salmon;
+
+        }
+        a{/*inline-level*/
+            /*Agora o link é um block*/
+            display: block;
+            border-width: 10px ;
+            border-style: solid;
+            border-color: rgb(231, 0, 0);
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são de box-level, mas os <a href="#"> links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+</body>
+</html>
